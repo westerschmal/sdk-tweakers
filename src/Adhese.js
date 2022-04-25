@@ -94,24 +94,24 @@
 	 }
 	 this.config.logSafeframeMessages = options.safeframeMsg || this.logSafeframeMessages;
 
- 	this.registerRequestParameter('rn', Math.round(Math.random()*10000));
-  	if(typeof(Fingerprint) === "function"){
-      	this.registerRequestParameter('fp', new Fingerprint({canvas: true}).get());
-  	}
-	this.registerRequestParameter('pr', (window.devicePixelRatio || 1));
-	if (typeof options.referrer == 'undefined' || options.referrer == true) {
-		this.registerRequestParameter('re', this.helper.base64.urlencode(document.referrer.substr(0, 200)));
-	}
+ 	// this.registerRequestParameter('rn', Math.round(Math.random()*10000));
+  	// if(typeof(Fingerprint) === "function"){
+    //   	this.registerRequestParameter('fp', new Fingerprint({canvas: true}).get());
+  	// }
+	// this.registerRequestParameter('pr', (window.devicePixelRatio || 1));
+	// if (typeof options.referrer == 'undefined' || options.referrer == true) {
+	// 	this.registerRequestParameter('re', this.helper.base64.urlencode(document.referrer.substr(0, 200)));
+	// }
 	if (typeof options.url == 'undefined' || options.url == true) {
 		this.registerRequestParameter('ur', this.helper.base64.urlencode(window.location.href));
 	}
- 	this.userAgent = this.helper.getUserAgent();
-	for (var p in this.userAgent) {
- 		this.registerRequestParameter('br', this.userAgent[p]);
- 	}
+ 	// this.userAgent = this.helper.getUserAgent();
+	// for (var p in this.userAgent) {
+ 	// 	this.registerRequestParameter('br', this.userAgent[p]);
+ 	// }
   	if(typeof(this.Detection) === "function"){
       	this.registerRequestParameter('dt', this.detection.device());
-      	this.registerRequestParameter('br', this.detection.device());
+      	//this.registerRequestParameter('br', this.detection.device());
   	}
     this.config.previewExclusive = false;
     if(options.previewExclusive) this.config.previewExclusive = options.previewExclusive;
