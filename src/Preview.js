@@ -111,7 +111,7 @@ Adhese.prototype.showPreviewSign = function () {
 	if (!document.getElementById("adhPreviewMessage")){
 		var that = this;
 		var p = document.createElement('DIV');
-		var msg = '<div id="adhPreviewMessage" style="opacity: 0.4; cursor:pointer;font-family:Helvetica,Verdana; font-size:12px; text-align:center; background-color: #000000; color: #FFFFFF; position:fixed; top:10px;left:10px;padding:10px;z-index:9999;width: 100px;">ADHESE PREVIEW MODE<br/>clock to close</div>';
+		var msg = '<div id="adhPreviewMessage" style="opacity: 0.4; cursor:pointer;font-family:Helvetica,Verdana; font-size:12px; text-align:center; background-color: #000000; color: #FFFFFF; position:fixed; top:10px;left:10px;padding:10px;z-index:9999;width: 100px;">ADHESE PREVIEW MODE<br/>click to close</div>';
 		p.innerHTML = msg;
 		// once and afterload
 		document.body.appendChild(p);
