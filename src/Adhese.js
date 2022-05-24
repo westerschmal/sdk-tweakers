@@ -206,7 +206,7 @@ Adhese.prototype.addRequestString = function(value) {
 	if (this.previewActive) {
 		var pf = this.previewFormats
 	   for (var key in pf) {
-		   if (key  == formatCode + (options.position?options.position:"")) {
+		   if (key == formatCode || (options.position && key == formatCode + options.position)) {
 			   var previewformat = pf[formatCode + (options.position?options.position:"")];
 			   // create Ad for preview
 			   var previewAd = new this.Ad(this, formatCode, options);
